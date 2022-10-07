@@ -8,16 +8,8 @@
 </head>
 <body>
 <!--<p th:text="'Hello, ' + ${title} + '!'" />-->
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="#">Features</a>
-        <a class="p-2 text-dark" href="#">Enterprise</a>
-        <a class="p-2 text-dark" href="#">Support</a>
-        <a class="p-2 text-dark" href="#">Pricing</a>
-    </nav>
-    <a class="btn btn-outline-primary" href="#">Sign up</a>
-</div>
+
+<header th:insert="blocks/header :: header"></header>
 
 
 
@@ -181,15 +173,7 @@
 
 </main>
 
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-        <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
-    </div>
-</footer>
+<div th:insert="blocks/footer :: footer"></div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
