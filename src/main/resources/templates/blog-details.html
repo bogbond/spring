@@ -13,11 +13,12 @@
 <div class="container mt-5">
     <h2>My Blog</h2>
 
-    <div th:each="el : ${posts}" class="alert alert-info mt-2">
-        <h3 th:text="${el.title}"></h3>
-        <h3 th:text="${el.anons}"></h3>
+    <div th:each="el : ${post}" class="alert alert-info mt-2">
+        <h1 th:text="${el.title}"></h1>
+        <h3 th:text="${el.full_text}"></h3>
         <h5 th:text="${el.views}"></h5>
-        <a th:href="'/blog/'+${el.id}" class="btn btn-warning">Детальнее</a>
+        <a th:href="'/blog/'+${el.id} + '/edit'" class="btn btn-warning">Редактировать</a>
+        <a th:href="'/blog/'+${el.id} + 'remove'" class="btn btn-warning">Удалить</a>
     </div>
 </div>
 
